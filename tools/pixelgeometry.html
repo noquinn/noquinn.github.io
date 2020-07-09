@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pixelated shape generation tool for Minecraft (or whatever)">
+    <meta name="keywords" content="minecraft, tools, shape, plot, plotter, generator, pixel, curve, polygon, spiral, ellipse, circle">
+    <meta property="og:image" content="https://cquinn.dev/tools/boop.jpg">
+    <title>Pixel Shape Generator</title>
+    <link href="pixelgeometry.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="center">
+      <center><h2>PIXEL SHAPE GENERATION TOOL</h2></center>
+      <table id='table' cellspacing='0' cellpadding='0'>
+        <tr>
+          <td id='cell1'>
+            <div id="archimedianControls">
+
+              <div class="control"><button class="increment" onclick="inc(archimedian.loops, -.1)">-</button><button class="increment" onclick="inc(archimedian.loops, .1)">+</button><input type="range" min="1" max="10" value="5" step=".1" class="slider" id="archimedianLoopsSlider">
+              <p class="sliderdisp">LOOPS: <span id="archimedianLoopsDisp">5</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(archimedian.diameter, -1)">-</button><button class="increment" onclick="inc(archimedian.diameter, 1)">+</button><input type="range" min="4" max="150" value="50" class="slider" id="archimedianDiameterSlider">
+              <p class="sliderdisp">DIAMETER: <span id="archimedianDiameterDisp">50</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(archimedian.rot, -1)">-</button><button class="increment" onclick="inc(archimedian.rot, 1)">+</button><input type="range" min="0" max="360" value="0" class="slider" id="archimedianRotSlider">
+              <p class="sliderdisp">ROTATION: <span id="archimedianRotDisp">0&#176;</span></p></div>
+
+            </div>
+
+            <div id="hypercycloidControls">
+
+              <div class="control"><button class="increment" onclick="inc(hypercycloid.cusps, -1)">-</button><button class="increment" onclick="inc(hypercycloid.cusps, 1)">+</button><input type="range" min="2" max="50" value="5" class="slider" id="hypercycloidCuspsSlider">
+              <p class="sliderdisp">CUSPS: <span id="hypercycloidCuspsDisp">5</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(hypercycloid.diameter, -1)">-</button><button class="increment" onclick="inc(hypercycloid.diameter, 1)">+</button><input type="range" min="4" max="150" value="50" class="slider" id="hypercycloidDiameterSlider">
+              <p class="sliderdisp">DIAMETER: <span id="hypercycloidDiameterDisp">50</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(hypercycloid.rot, -1)">-</button><button class="increment" onclick="inc(hypercycloid.rot, 1)">+</button><input type="range" min="0" max="360" value="0" class="slider" id="hypercycloidRotSlider">
+              <p class="sliderdisp">ROTATION: <span id="hypercycloidRotDisp">0&#176;</span></p></div>
+
+            </div>
+
+            <div id="hypocycloidControls">
+
+              <div class="control"><button class="increment" onclick="inc(hypocycloid.cusps, -1)">-</button><button class="increment" onclick="inc(hypocycloid.cusps, 1)">+</button><input type="range" min="3" max="50" value="5" class="slider" id="hypocycloidCuspsSlider">
+              <p class="sliderdisp">CUSPS: <span id="hypocycloidCuspsDisp">5</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(hypocycloid.diameter, -1)">-</button><button class="increment" onclick="inc(hypocycloid.diameter, 1)">+</button><input type="range" min="4" max="150" value="50" class="slider" id="hypocycloidDiameterSlider">
+              <p class="sliderdisp">DIAMETER: <span id="hypocycloidDiameterDisp">50</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(hypocycloid.rot, -1)">-</button><button class="increment" onclick="inc(hypocycloid.rot, 1)">+</button><input type="range" min="0" max="360" value="0" class="slider" id="hypocycloidRotSlider">
+              <p class="sliderdisp">ROTATION: <span id="hypocycloidRotDisp">0&#176;</span></p></div>
+
+            </div>
+        
+            <div id="polygonControls">
+
+              <div class="control"><button class="increment" onclick="inc(polygon.sides, -1)">-</button><button class="increment" onclick="inc(polygon.sides, 1)">+</button><input type="range" min="3" max="30" value="5" class="slider" id="polygonSidesSlider">
+              <p class="sliderdisp">SIDES: <span id="polygonSidesDisp">5</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(polygon.diameter, -1)">-</button><button class="increment" onclick="inc(polygon.diameter, 1)">+</button><input type="range" min="4" max="150" value="50" class="slider" id="polygonDiameterSlider">
+              <p class="sliderdisp">DIAMETER: <span id="polygonDiameterDisp">50</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(polygon.rot, -1)">-</button><button class="increment" onclick="inc(polygon.rot, 1)">+</button><input type="range" min="0" max="360" value="0" class="slider" id="polygonRotSlider">
+              <p class="sliderdisp">ROTATION: <span id="polygonRotDisp">0&#176;</span></p></div>
+
+            </div>
+
+            <div id="reuleauxControls">
+
+              <div class="control"><button class="increment" onclick="inc(reuleaux.sides, -2)">-</button><button class="increment" onclick="inc(reuleaux.sides, 2)">+</button><input type="range" min="3" max="13" value="3" step="2" class="slider" id="reuleauxSidesSlider">
+              <p class="sliderdisp">SIDES: <span id="reuleauxSidesDisp">3</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(reuleaux.diameter, -1)">-</button><button class="increment" onclick="inc(reuleaux.diameter, 1)">+</button><input type="range" min="4" max="150" value="50" class="slider" id="reuleauxDiameterSlider">
+              <p class="sliderdisp">DIAMETER: <span id="reuleauxDiameterDisp">50</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(reuleaux.rot, -1)">-</button><button class="increment" onclick="inc(reuleaux.rot, 1)">+</button><input type="range" min="0" max="360" value="90" class="slider" id="reuleauxRotSlider">
+              <p class="sliderdisp">ROTATION: <span id="reuleauxRotDisp">90&#176;</span></p></div>
+
+            </div>
+
+            <div id="superellipseControls">
+
+              <div class="control"><button class="increment" onclick="inc(superellipse.exponent, -.01)">-</button><button class="increment" onclick="inc(superellipse.exponent, .01)">+</button><input type="range" min=".2" max="20" value="5" step=".01" class="slider" id="superellipseExponentSlider">
+              <p class="sliderdisp">EXPONENT: <span id="superellipseExponentDisp">5</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(superellipse.width, -1)">-</button><button class="increment" onclick="inc(superellipse.width, 1)">+</button><input type="range" min="5" max="150" value="50" class="slider" id="superellipseWidthSlider">
+              <p class="sliderdisp">WIDTH: <span id="superellipseWidthDisp">50</span></p></div>
+
+              <div class="control"><button class="increment" onclick="inc(superellipse.height, -1)">-</button><button class="increment" onclick="inc(superellipse.height, 1)">+</button><input type="range" min="5" max="150" value="50" class="slider" id="superellipseHeightSlider">
+              <p class="sliderdisp">HEIGHT: <span id="superellipseHeightDisp">50</span></p></div>
+
+            </div>
+          </td>
+          <td id='cell2'>
+            <select id="shapeSelector">
+              <option value="archimedian">Archimedian Spiral</option>
+              <option value="hypocycloid">Hypocycloid</option>
+              <option value="hypercycloid">Hypercycloid</option>
+              <option value="polygon" selected="selected">Regular Polygon</option>
+              <option value="reuleaux">Reuleaux Polygon</option>
+              <option value="superellipse">Superellipse</option>
+            </select>
+            <div>
+              <input type="checkbox" id="blockCountToggle" checked="checked">
+              <label for="blockCountToggle">SHOW BLOCK COUNT</label>
+            </div>
+            <div id="snap">
+              <input type="checkbox" id="snapToggle">
+              <label for="snapToggle">ROTATION SNAP</label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <canvas id="plane" width="600" height="600" style="border:1px solid #000000;"></canvas>
+      <button id="download" onclick="download()">save as png</button>
+      <button id="newTab" onclick="newTab()">open in new tab</button>
+      <br>
+      <br>
+      <center><h3>inspired by Jesse Donat's <a href="https://donatstudios.com/PixelCircleGenerator" target="_blank">Pixel Circle / Oval Generator</a></h3></center>
+    </div>
+    <script src="pixelgeometry.js"></script>
+  </body>
+</html>

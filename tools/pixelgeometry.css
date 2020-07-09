@@ -1,0 +1,151 @@
+body {
+  background-color: #353C51;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif; 
+  font-size: 12px;
+  color: white;
+}
+
+.center {
+  border: 1px rgba(255, 255, 255, 0.333) solid;
+  border-radius: 15px;
+  width: 650px;
+  height: 850px;
+  resize: horizontal;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding: 0px;
+  background-color: #4A6488;
+
+  /* just cause its annoying when you're
+  trying to move the sliders and you accidentally
+  highlight the labels instead */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p {
+  vertical-align: 1px;
+}
+
+label {
+  vertical-align: 2px;
+}
+
+select {
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 10px 8px 8px 0px;
+  overflow: hidden;
+  padding: 2px 8px;
+  white-space: nowrap;
+  background-color: #293045;
+  border: 1px rgba(255, 255, 255, 0.333) solid;
+  border-radius: 4px;
+  color: white;
+}
+
+#archimedianControls, #hypocycloidControls, #hypercycloidControls, #superellipseControls, #reuleauxControls {
+  display: none;
+}
+
+#cell1 {
+  vertical-align: top;
+  width: 1000px;
+}
+
+#cell2 {
+  vertical-align: top;
+  width: 200px;
+}
+
+.control {
+  text-align: left;
+  margin: 0px;
+  margin-left: 25px;
+}
+
+button {
+  background-color: #293045;
+  border: 1px rgba(255, 255, 255, 0.333) solid;
+  border-radius: 4px;
+  color: white;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.increment {
+  width: 25px;
+  height: 25px;
+  font-size: 11px;
+  margin: 2px;
+}
+
+.slider {
+  margin-bottom: 0px;
+  margin-left: 5px;
+  display: inline-block;
+  -webkit-appearance: none;
+  width: 100px;
+  height: 10px;
+  background: #d7d7e0;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.sliderdisp {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#plane {
+  margin-left: 25px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 0px;
+  border-top: 1px rgba(255, 255, 255, 0.333) solid;
+  border-bottom: 1px rgba(255, 255, 255, 0.333) solid;
+  background-color: rgb(65, 87, 119);
+}
+
+#download, #newTab {
+  position: relative;
+  left: 25px;
+}
+
+a:link, a:visited {
+  color: rgb(190, 243, 250);
+}
+
+a:hover {
+  color: rgb(180, 222, 247);
+}
+
+a:active {
+  color: blue;
+}
