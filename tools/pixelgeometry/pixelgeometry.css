@@ -1,6 +1,6 @@
 body {
-  background-color: #353C51;
-  font-family: Futura, Trebuchet MS, Arial, sans-serif; 
+  background-color: #353c51;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
   font-size: 12px;
   color: white;
 }
@@ -15,7 +15,7 @@ body {
   margin-top: 20px;
   margin-bottom: 0px;
   padding: 0px;
-  background-color: #4A6488;
+  background-color: #4a6488;
 
   /* just cause its annoying when you're
   trying to move the sliders and you accidentally
@@ -52,7 +52,11 @@ select {
   color: white;
 }
 
-#archimedianControls, #hypocycloidControls, #hypercycloidControls, #superellipseControls, #reuleauxControls {
+#archimedianControls,
+#hypocycloidControls,
+#hypercycloidControls,
+#superellipseControls,
+#reuleauxControls {
   display: none;
 }
 
@@ -133,12 +137,14 @@ h2 {
   background-color: rgb(65, 87, 119);
 }
 
-#download, #newTab {
+#download,
+#newTab {
   position: relative;
   left: 25px;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: rgb(190, 243, 250);
 }
 
