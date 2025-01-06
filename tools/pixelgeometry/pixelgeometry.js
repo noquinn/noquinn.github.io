@@ -384,7 +384,7 @@ var allControls = [
   document.getElementById('snap')
 ];
 
-shapeSelector.onclick = function() {
+shapeSelector.onchange = function() {
   for (i = 0; i < allControls.length; i ++) {
     allControls[i].style.display = "none";
   }
